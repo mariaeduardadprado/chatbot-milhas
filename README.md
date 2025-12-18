@@ -1,5 +1,5 @@
 ## Chatbot Especialista em Milhas (Agent ADK)
-Este projeto consiste em um Agente de Inteligência Artificial especializado no mercado de milhas aéreas brasileiras. O agente não apenas tira dúvidas conceituais, mas também utiliza ferramentas (Tools) para realizar cálculos de viabilidade financeira em tempo real.
+Este projeto consiste em um Agente de Inteligência Artificial especializado no mercado de milhas aéreas. O agente não apenas tira dúvidas conceituais, mas também utiliza ferramentas (Tools) para realizar cálculos de viabilidade financeira em tempo real.
 
 O projeto foi desenvolvido utilizando o Google Agent Development Kit (ADK) e o modelo Claude 3 (Anthropic) via Amazon Bedrock.
 
@@ -25,23 +25,6 @@ Guardrails de Conteúdo: Instruções rigorosas para manter o foco no nicho de v
 
 Avaliação Automatizada: Suite de testes com Pytest e AgentEvaluator para medir a similaridade das respostas.
 
-### Como Executar o Projeto
-Pré-requisitos
-Docker e Docker Compose instalados.
-
-Credenciais da AWS configuradas (para acesso ao Bedrock).
-
-**Passo a Passo
-Subir o ambiente:**
-
-docker compose up -d --build
-
-Abra o navegador em: http://localhost:8000/docs
-
-**Rodar os Testes de Avaliação:**
-
-docker compose exec chatbot-api pytest tests/integration/test_milhas_agent_eval.py
-
 
 ### Estrutura de Pastas
 
@@ -49,7 +32,10 @@ docker compose exec chatbot-api pytest tests/integration/test_milhas_agent_eval.
 │   ├── agent.py         
 │   └── calculator.py  
 ├── tests/  
-│   └── integration/   
+│   └── integration/  
+│       ├── test_milhas_agent_eval.py   
+│       ├── test_config.json  
+│       └── eval_milhas.test.json  
 ├── main.py   
 ├── Dockerfile   
 └── docker-compose.yml  
