@@ -1,0 +1,170 @@
+# .dockerignore para SOW Generator
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Arquivos de saída (podem ser grandes)
+output/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.md
+
+# Arquivos de log
+*.log
+logs/
+
+# Arquivos temporários
+tmp/
+temp/
+.tmp/
+.temp/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
+docker-compose*.yaml
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# Documentação
+README.md
+docs/
+*.rst
+
+# Arquivos de teste
+tests/
+test_*/
+*_test.py
+conftest.py
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Ferramentas de desenvolvimento
+.pre-commit-config.yaml
+.flake8
+.pylintrc
+pyproject.toml.bak
+
+# Arquivos de backup
+*.bak
+*.backup
+*.old
+*.orig
+
+# Arquivos específicos do AWS
+.aws/
+credentials
+
+# Arquivos do conhecimento base (podem ser grandes)
+knowledge/
+*.txt
+*.csv
+*.json
+
+# Storage local do NiceGUI
+storage/
+
+# Arquivos de configuração local
+config.local.*

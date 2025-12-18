@@ -1,0 +1,27 @@
+services:
+  chatbot-api:
+    build: .
+    container_name: chatbot_milhas_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - ~/.aws:/root/.aws:ro
+    environment:
+      AWS_PROFILE: default
+      AWS_REGION: us-east-1
+
+
+  adk-web:
+    build: .
+    container_name: chatbot-web
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/app
+      - ~/.aws:/root/.aws:ro
+    environment:
+      AWS_PROFILE: default
+      AWS_REGION: us-east-1
+    command: ["uv", "run", "adk", "web", "--host", "0.0.0.0", "--port", "8001"]
+    

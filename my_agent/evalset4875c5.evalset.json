@@ -1,0 +1,77 @@
+{
+  "eval_set_id": "evalset4875c5",
+  "name": "evalset4875c5",
+  "eval_cases": [
+    {
+      "eval_id": "caseeca8ba",
+      "conversation": [
+        {
+          "invocation_id": "e-4e2e22cb-8a39-4406-9779-3978b8471c49",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Encontrei uma passagem de São Paulo para o Rio por R$ 800,00 ou por 20.000 milhas (com taxas de R$ 60,00). Vale a pena usar as milhas?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Neste caso, vale muito a pena utilizar as 20.000 milhas para esta passagem! O cálculo mostra que você estaria obtendo um Custo por Mil Milhas (CPM) de R$ 37,00, o que é um excelente valor considerando que o preço médio no mercado fica em torno de R$ 20,00 por mil milhas.\n\nPortanto, a recomendação é emitir essa passagem utilizando as milhas, economizando R$ 740,00 (descontando as taxas de R$ 60,00 pagas com milhas). Esse é um ótimo exemplo de maximização do valor das suas milhas!"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "root_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "tooluse_dZ32VReXQbWCJZ8vBGCtWQ",
+                        "args": {
+                          "price_cash": 800,
+                          "price_miles": 20000,
+                          "tax_cash": 60
+                        },
+                        "name": "calculate_mile_value"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "root_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "tooluse_dZ32VReXQbWCJZ8vBGCtWQ",
+                        "name": "calculate_mile_value",
+                        "response": {
+                          "result": "Análise de Valor:\n- Preço Líquido (sem taxas): R$ 740.00\n- Valor de cada 1.000 milhas nesta emissão: R$ 37.00\nVeredito: Excelente! As milhas estão valendo mais que o mercado (R$ 20,00)."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1765992115.937867
+        }
+      ],
+      "session_input": {
+        "app_name": "my_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1765992149.6045606
+    }
+  ],
+  "creation_timestamp": 1765992139.3874502
+}

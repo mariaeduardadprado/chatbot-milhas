@@ -1,0 +1,12 @@
+[
+  {
+    "test_case_id": "case_milhas_001",
+    "query": "Quantas milhas são necessárias para um voo de São Paulo para Rio de Janeiro na classe econômica?",
+    "reference": "A quantidade de milhas necessárias para emitir uma passagem aérea na classe econômica de São Paulo para o Rio de Janeiro pode variar bastante dependendo do programa de milhas e da companhia aérea em questão. Em geral, para trechos domésticos mais curtos como esse, as principais companhias aéreas brasileiras costumam exigir entre 10.000 a 20.000 milhas ida e volta na classe econômica."
+  },
+  {
+  "test_case_id": "case_milhas_tool_calc",
+  "query": "Encontrei uma passagem de São Paulo para o Rio por R$ 800,00 ou por 20.000 milhas (com taxas de R$ 60,00). Vale a pena usar as milhas?",
+  "reference": "De acordo com o cálculo do CPM (Custo por Mil Milhas), para este caso específico, vale mais a pena utilizar as 20.000 milhas, pois cada 1.000 milhas está valendo R$ 37,00, valor bem acima da média do mercado brasileiro que costuma ficar entre R$ 15,00 - R$ 25,00 por mil milhas. Portanto, a recomendação é aproveitar e emitir a passagem com milhas, pois está rendendo um excelente custo-benefício nesta oportunidade."
+  }
+]
