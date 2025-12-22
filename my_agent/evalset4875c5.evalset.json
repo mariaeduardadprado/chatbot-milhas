@@ -71,6 +71,205 @@
         "user_id": "user"
       },
       "creation_timestamp": 1765992149.6045606
+    },
+    {
+      "eval_id": "case7bc3e4",
+      "conversation": [
+        {
+          "invocation_id": "e-d1c69747-084b-4006-ab44-a15efcfc11e7",
+          "user_content": {
+            "parts": [
+              {
+                "text": "como fazer bolo?"
+              }
+            ],
+            "role": "user"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1766076940.235875
+        },
+        {
+          "invocation_id": "e-81b6b82b-d9e6-4f0e-b78a-814efa190336",
+          "user_content": {
+            "parts": [
+              {
+                "text": "como fazer bolo?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Sinto muito, mas não posso fornecer instruções sobre como fazer bolo. Como assistente especializado em programas de milhas aéreas, meu foco é dar conselhos e realizar cálculos relacionados ao uso eficiente de milhas para viagens.\n\nSe você tiver alguma pergunta específica sobre comparar preços em dinheiro versus milhas para comprar uma passagem aérea, posso ajudar com o cálculo do valor do milheiro (CPM). Basta me fornecer o preço em reais e a quantidade de milhas necessária para a passagem que calcularei se vale mais a pena usar milhas ou dinheiro."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1766077068.529875
+        },
+        {
+          "invocation_id": "e-e01da823-44fe-47dd-94f3-1ca547cf2bbb",
+          "user_content": {
+            "parts": [
+              {
+                "text": "qual a diferença de pontos e milhas?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "A principal diferença entre pontos e milhas é:\n\nMilhas:\n- São acumuladas especificamente em programas de milhagem de companhias aéreas por voar com elas ou parceiros.\n- Milhas são usadas primariamente para resgatar passagens aéreas com a companhia aérea.\n- Normalmente existem regras e tabelas específicas para resgates de passagens com milhas.\n\nPontos:\n- São acumulados em programas de fidelidade mais genéricos, como de bancos, redes de varejo, cartões de crédito etc.\n- Pontos podem ser resgatados por uma vasta gama de produtos e serviços além de passagens, como estadias em hotéis, aluguéis de carros, compras online etc.\n- Não possuem tabelas tão rígidas para resgates, variando mais em valor monetário.\n\nEm resumo, milhas são mais específicas para viagens aéreas enquanto pontos são mais abrangentes, porém menos vantajosos para passagens. Para analisar se vale mais a pena usar pontos/milhas ou dinheiro para uma passagem, posso fazer o cálculo do valor do milheiro (CPM)."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1766077090.063116
+        }
+      ],
+      "session_input": {
+        "app_name": "my_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1766077179.978984
+    },
+    {
+      "eval_id": "case5fe22b",
+      "conversation": [
+        {
+          "invocation_id": "e-d1c69747-084b-4006-ab44-a15efcfc11e7",
+          "user_content": {
+            "parts": [
+              {
+                "text": "como fazer bolo?"
+              }
+            ],
+            "role": "user"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1766076940.235875
+        },
+        {
+          "invocation_id": "e-81b6b82b-d9e6-4f0e-b78a-814efa190336",
+          "user_content": {
+            "parts": [
+              {
+                "text": "como fazer bolo?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Sinto muito, mas não posso fornecer instruções sobre como fazer bolo. Como assistente especializado em programas de milhas aéreas, meu foco é dar conselhos e realizar cálculos relacionados ao uso eficiente de milhas para viagens.\n\nSe você tiver alguma pergunta específica sobre comparar preços em dinheiro versus milhas para comprar uma passagem aérea, posso ajudar com o cálculo do valor do milheiro (CPM). Basta me fornecer o preço em reais e a quantidade de milhas necessária para a passagem que calcularei se vale mais a pena usar milhas ou dinheiro."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1766077068.529875
+        },
+        {
+          "invocation_id": "e-e01da823-44fe-47dd-94f3-1ca547cf2bbb",
+          "user_content": {
+            "parts": [
+              {
+                "text": "qual a diferença de pontos e milhas?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "A principal diferença entre pontos e milhas é:\n\nMilhas:\n- São acumuladas especificamente em programas de milhagem de companhias aéreas por voar com elas ou parceiros.\n- Milhas são usadas primariamente para resgatar passagens aéreas com a companhia aérea.\n- Normalmente existem regras e tabelas específicas para resgates de passagens com milhas.\n\nPontos:\n- São acumulados em programas de fidelidade mais genéricos, como de bancos, redes de varejo, cartões de crédito etc.\n- Pontos podem ser resgatados por uma vasta gama de produtos e serviços além de passagens, como estadias em hotéis, aluguéis de carros, compras online etc.\n- Não possuem tabelas tão rígidas para resgates, variando mais em valor monetário.\n\nEm resumo, milhas são mais específicas para viagens aéreas enquanto pontos são mais abrangentes, porém menos vantajosos para passagens. Para analisar se vale mais a pena usar pontos/milhas ou dinheiro para uma passagem, posso fazer o cálculo do valor do milheiro (CPM)."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1766077090.063116
+        }
+      ],
+      "session_input": {
+        "app_name": "my_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1766077239.0246632
+    },
+    {
+      "eval_id": "teste01",
+      "conversation": [
+        {
+          "invocation_id": "e-a55e2d0a-10e9-4408-ab9a-2ca2c3dbf6e0",
+          "user_content": {
+            "parts": [
+              {
+                "text": "A passagem custa R$ 900 ou 30.000 milhas. O que é melhor?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Com base no cálculo do CPM (Custo por Mil Milhas), é mais vantajoso gastar as 30.000 milhas nesta passagem, visto que cada 1.000 milhas vale R$ 30,00 - um valor muito acima da faixa normal de R$ 15 - R$ 25 por milhar.\n\nA emissão com milhas rende um melhor aproveitamento financeiro que o pagamento em dinheiro. Portanto, recomendo utilizar as 30.000 milhas para esta viagem."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "root_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "tooluse_93yJuIGWSmu6Mg74RlTYpg",
+                        "args": {
+                          "price_cash": 900,
+                          "price_miles": 30000
+                        },
+                        "name": "calculate_mile_value"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "root_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "tooluse_93yJuIGWSmu6Mg74RlTYpg",
+                        "name": "calculate_mile_value",
+                        "response": {
+                          "result": "Análise de Valor:\n- Preço Líquido (sem taxas): R$ 900.00\n- Valor de cada 1.000 milhas nesta emissão: R$ 30.00\nVeredito: Excelente! As milhas estão valendo mais que o mercado (R$ 20,00)."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1766154332.622211
+        }
+      ],
+      "session_input": {
+        "app_name": "my_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1766161735.9172988
     }
   ],
   "creation_timestamp": 1765992139.3874502
