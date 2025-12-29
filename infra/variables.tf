@@ -34,3 +34,8 @@ variable "availability_zones" {
   description = "A comma-separated list of availability zones, defaults to all AZ of the region, if set to something other than the defaults, both private_subnets and public_subnets have to be defined as well"
   type        = list(string)
 }
+
+variable "container_port" {
+  description = "The port where the Docker is exposed"
+  type        = string
+}

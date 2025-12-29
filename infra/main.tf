@@ -42,3 +42,13 @@ module "security_groups" {
   container_port = var.container_port
 }
 
+module "alb" {
+  source              = "./modules/alb"
+  name                = var.name
+  environment         = var.environment
+  vpc_id              = module.vpc.vpc_id
+  alb_subnets_id      = module.vpc.public_subnets
+  alb_security_groups = [module.security_groups.alb]
+}
+
+
