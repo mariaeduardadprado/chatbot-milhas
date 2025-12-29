@@ -39,3 +39,21 @@ variable "container_port" {
   description = "The port where the Docker is exposed"
   type        = string
 }
+
+variable "container_cpu" {
+  description = "The number of cpu units used by the task"
+  default     = 256
+  type        = number
+}
+
+variable "container_memory" {
+  description = "The amount (in MiB) of memory used by the task"
+  default     = 512
+  type        = number
+}
+
+variable "service_desired_count" {
+  description = "Number of tasks running in parallel"
+  default     = 2
+  type        = number
+}

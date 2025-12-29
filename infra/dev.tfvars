@@ -6,3 +6,6 @@ private_subnets = ["172.25.0.0/20", "172.25.16.0/20"]
 public_subnets = ["172.25.48.0/20", "172.25.64.0/20"]
 availability_zones = ["us-east-1a", "us-east-1b"]
 container_port = 8000
+service_desired_count = 1
+container_cpu = 512
+container_memory = 1024
