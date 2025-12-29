@@ -52,3 +52,8 @@ module "alb" {
 }
 
 
+module "ecr_backend" {
+  source      = "./modules/ecr"
+  name        = var.name
+  environment = var.environment
+}
