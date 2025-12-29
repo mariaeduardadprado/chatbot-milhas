@@ -45,3 +45,7 @@ async def run_my_agent(data: AgentInput):
             break
 
     return {"resposta": final_response}
+
+@app.get("/")
+async def health_check():
+    return {"status": "healthy", "service": "chatbot-milhas"}
