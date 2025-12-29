@@ -1,15 +1,11 @@
 variable "name" {
-  description = "Nome do projeto"
+  description = "Name for the VPC"
   type        = string
 }
 
 variable "environment" {
-  description = "Ambiente (ex: dev, prod)"
-  type        = string
-}
-
-variable "region" {
-  description = "Região AWS"
+  description = "The name of your environment, e.g. \"prod\""
+  default     = "sandbox"
   type        = string
 }
 
@@ -33,27 +29,4 @@ variable "public_subnets" {
 variable "availability_zones" {
   description = "A comma-separated list of availability zones, defaults to all AZ of the region, if set to something other than the defaults, both private_subnets and public_subnets have to be defined as well"
   type        = list(string)
-}
-
-variable "container_port" {
-  description = "The port where the Docker is exposed"
-  type        = string
-}
-
-variable "container_cpu" {
-  description = "The number of cpu units used by the task"
-  default     = 256
-  type        = number
-}
-
-variable "container_memory" {
-  description = "The amount (in MiB) of memory used by the task"
-  default     = 512
-  type        = number
-}
-
-variable "service_desired_count" {
-  description = "Number of tasks running in parallel"
-  default     = 2
-  type        = number
 }
