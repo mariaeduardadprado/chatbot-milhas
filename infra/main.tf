@@ -24,3 +24,13 @@ module "lambda" {
   environment= var.environment
   region = var.region
 }
+module "vpc" {
+  source              = "./modules/vpc"
+  name                = var.name
+  environment         = var.environment
+  cidr_block          = var.cidr_block
+  private_subnets     = var.private_subnets
+  public_subnets      = var.public_subnets
+  availability_zones  = var.availability_zones
+}
+

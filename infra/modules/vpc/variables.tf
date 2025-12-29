@@ -1,15 +1,11 @@
 variable "name" {
-  description = "Nome do projeto"
+  description = "Name for the VPC"
   type        = string
 }
 
 variable "environment" {
-  description = "Ambiente (ex: dev, prod)"
-  type        = string
-}
-
-variable "region" {
-  description = "Região AWS"
+  description = "The name of your environment, e.g. \"prod\""
+  default     = "sandbox"
   type        = string
 }
 
