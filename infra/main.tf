@@ -34,3 +34,11 @@ module "vpc" {
   availability_zones  = var.availability_zones
 }
 
+module "security_groups" {
+  source         = "./modules/security-groups"
+  name           = var.name
+  vpc_id         = module.vpc.vpc_id
+  environment    = var.environment
+  container_port = var.container_port
+}
+
