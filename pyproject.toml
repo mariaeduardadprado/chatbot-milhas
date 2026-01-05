@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    
     "boto3>=1.42.2",
     "fastapi>=0.123.8",
     "google-adk[eval]>=1.18.0",

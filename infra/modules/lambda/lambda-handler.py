@@ -1,23 +1,30 @@
 import json
 import boto3
 import os
-
-sns_client = boto3.client('sns')
+import http.client
 
 def lambda_handler(event, context):
-    RESPONSE_TOPIC_ARN = os.environ.get('RESPONSE_TOPIC_ARN')
+    # O endereço do seu ECS (ex: DNS do Load Balancer ou IP)
+    # Recomendo passar isso via variável de ambiente no Terraform
+    ECS_ENDPOINT = os.environ.get('ECS_ENDPOINT') 
     
-    if not event.get('Records'):
-        return {'statusCode': 400, 'body': 'Evento sem Records'}
-
     for record in event['Records']:
-        user_msg = record['Sns']['Message']
-        response_msg = f"RESPOSTA PROCESSADA: {user_msg.upper()}"
+        msg_original = record['Sns']['Message']
         
-        sns_client.publish(
-            TopicArn=RESPONSE_TOPIC_ARN,
-            Message=response_msg
-        )
-        print(f"Publicado no Fan-out em uppercase: {response_msg}")
-        
-    return {'statusCode': 200, 'body': json.dumps('Processado em Uppercase!')}
+        # Preparando a chamada para o ECS (FastAPI)
+        # Exemplo usando http.client (padrão do Python) para não precisar de Layers extras
+        try:
+            conn = http.client.HTTPConnection(ECS_ENDPOINT)
+            payload = json.dumps({"texto": msg_original})
+            headers = {'Content-type': 'application/json'}
+            
+            # Chamando a rota do seu agente (ex: /processar)
+            conn.request("POST", "/processar", payload, headers)
+            response = conn.getresponse()
+            data = response.read()
+            
+            print(f"ECS respondeu com status: {response.status}")
+        except Exception as e:
+            print(f"Erro ao conectar no ECS: {str(e)}")
+            
+    return {'statusCode': 200}

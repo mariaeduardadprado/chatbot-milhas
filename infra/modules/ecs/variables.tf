@@ -56,3 +56,8 @@ variable "ecs_service_security_groups" {
   description = "The ECS security group"
   type = list(string)
 }
+
+variable "response_topic_arn" {
+  description = "ARN do tópico SNS de resposta"
+  type        = string
+}

@@ -53,6 +53,54 @@ resource "aws_cloudwatch_log_group" "main" {
   }
 }
 
+resource "aws_iam_policy" "ecs_bedrock_policy" {
+  name        = "ECSAppBedrockAccess"
+  description = "Permite que o agente no ECS chame o Claude 3 no Bedrock"
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action   = [
+          "bedrock:InvokeModel",
+          "bedrock:InvokeModelWithResponseStream",
+          "bedrock:Converse"
+        ]
+        Effect   = "Allow"
+        Resource = "*" 
+      }
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "ecs_bedrock_attachment" {
+  # Certifique-se que este nome coincide com o nome da role no seu código
+  role = aws_iam_role.ecs_task_role.name 
+  policy_arn = aws_iam_policy.ecs_bedrock_policy.arn
+}
+
+# 1. Política de permissão para publicar no SNS
+resource "aws_iam_policy" "ecs_sns_publish_policy" {
+  name        = "ECS-SNS-Publish-Policy"
+  description = "Permite que o Agente publique no tópico de Fan-out"
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action   = "sns:Publish"
+        Effect   = "Allow"
+        # Garante que ele só pode publicar no tópico de resposta
+        Resource = var.response_topic_arn
+      }
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "ecs_sns_attachment" {
+  role       = aws_iam_role.ecs_task_role.name
+  policy_arn = aws_iam_policy.ecs_sns_publish_policy.arn
+}
 
 resource "aws_ecs_task_definition" "main" {
   family                   = "${var.name}-task-${var.environment}"
@@ -72,6 +120,14 @@ resource "aws_ecs_task_definition" "main" {
       containerPort = var.container_port
       hostPort      = var.container_port
     }]
+
+    environment = [
+  {
+    name  = "RESPONSE_TOPIC_ARN"
+    value = var.response_topic_arn
+  }
+]
+
     logConfiguration = {
       logDriver = "awslogs"
       options = {

@@ -1,14 +1,26 @@
 variable "name" {
-  description = "Nome do projeto"
-  type        = string
+  type = string
 }
 
 variable "environment" {
-  description = "Ambiente (ex: dev, prod)"
-  type        = string
+  type = string
 }
 
 variable "region" {
-  description = "Região AWS"
+  type = string
+}
+
+variable "ecs_endpoint" {
+  description = "Endpoint do ALB/ECS"
+  type        = string
+}
+
+variable "response_topic_arn" {
+  description = "ARN do tópico SNS de resposta (fan-out)"
+  type        = string
+}
+
+variable "user_messages_topic_arn" {
+  description = "ARN do tópico SNS de entrada (fan-in)"
   type        = string
 }
